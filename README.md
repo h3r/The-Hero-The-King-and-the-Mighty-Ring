@@ -1,6 +1,8 @@
 The Hero, The King & The Mighty Ring
 ====================================
 
+![](doc/Capture.PNG)
+
 This is a simple finite state machine to represent a simple quest game where the hero has to find the king's lost ring and return to him to receibe the reward.
 
 
