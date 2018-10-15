@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "medium";
+    src:url(3270Medium.ttf);
+}
+* {
+    font-family: "medium";
+    margin:0;padding:0;
+}
+
+html, body{
+    width:100%;height:100%; overflow: hidden;
+}
+
+body{
+    line-height: 1.5em;
+    background-image: url(bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    filter:drop-shadow(10px 30px 4px rgba(0,0,0,0.5));
+}
+main{
+    height: fit-content;
+}
+main table{
+    background-color: rgba(200,200,190,1);
+    padding: 1em 2em;
+    border-radius: 4px;
+    border: 3px solid rgba(0,0,0,0.1);
+    min-width: 300px;
+}
+
+dialog{
+    margin:auto;
+    padding: 1em 2em;
+    font-size:1.2em;
+    color:rgb(33, 33, 33);
+    text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.25);
+    min-height: 5em;
+    width: 80vw;
+    max-width: 600px;
+    background-color:rgb(197, 195, 192);
+    border-radius: 15px;
+    border: 3px dashed grey;
+    position: absolute;
+    bottom:50px;
+    animation: infinite 3s dialog-anim ease-in-out;
+}
+dialog::before{
+    content:"";
+    position:absolute;
+    right:1em;bottom:1em;
+    filter:drop-shadow( 2px 6px 1px rgba(33,33,33,0.5));
+    border-style: solid;
+    cursor:pointer;
+    border-width: 15px 10px 0 10px ;
+    border-color:  #444 transparent transparent transparent;
+    animation: infinite 1s dialog-anim ease-in-out;
+    margin-bottom:-30px;
+}
+
+dialog li{
+    width: fit-content;
+    margin-left: 9px;
+}
+
+dialog li:hover{
+    font-weight: bold;
+}
+dialog li:hover::before{
+    content:"";
+    width:35px;height:35px;
+    background:red;
+    position: absolute;
+    left:30px;
+    margin-top: -8px;
+    background:url(cursor.png);
+    background-size:cover;
+}
+
+@keyframes dialog-anim{
+    0% {bottom:45px;}
+    50% {bottom:47px;}
+    100%{bottom:45px;}
+}
